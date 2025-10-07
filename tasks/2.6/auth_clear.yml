@@ -1,0 +1,12 @@
+---
+- name: Delete this token
+  ansible.platform.token:
+    gateway_hostname: "{{ aap_hostname }}"
+    gateway_token: "{{ aap_token }}"
+    existing_token: "{{ aap_token }}"
+    state: absent
+    validate_certs: "{{ aap_validate_certs }}"
+  when: __clear_token | default(false)
+  tags:
+    - always
+...
