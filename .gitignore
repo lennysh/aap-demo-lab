@@ -1,5 +1,6 @@
 vault*
 temp/
+ansible.cfg
 ansible-navigator.*
 *artifact*.json
 
