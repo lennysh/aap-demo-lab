@@ -1,0 +1,8 @@
+---
+controller_inventories:
+  - name: "localhost"
+    description: ""
+    organization: "DEMO ORG 01"
+    host_filter: ""
+    prevent_instance_group_fallback: False
+...

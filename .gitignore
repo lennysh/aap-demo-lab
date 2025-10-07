@@ -1,0 +1,7 @@
+vault*
+temp/
+ansible-navigator.*
+*artifact*.json
+
+**/.vscode
+**/.ansible
