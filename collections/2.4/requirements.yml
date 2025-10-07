@@ -1,0 +1,7 @@
+---
+collections:
+  - name: infra.controller_configuration
+  - name: ansible.controller
+    version: '>=4.5.0,<4.6.0'
+  - name: ansible.eda
+  - name: ansible.hub
