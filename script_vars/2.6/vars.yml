@@ -55,4 +55,54 @@ aapread_specific_tags:
     - hub_ee_repositories
     - hub_namespaces
     - hub_roles
+
+aapupdate_specific_tags:
+  Controller:
+    - applications
+    - credential_input_sources
+    - credential_types
+    - credentials
+    - execution_environments
+    - groups
+    - hosts
+    - instance_groups
+    - inventories
+    - inventory_sources
+    - job_templates
+    - labels
+    - notifications
+    - notification_templates
+    - organizations
+    - projects
+    - roles
+    - schedules
+    - settings
+    - teams
+    - users
+    - workflow_job_templates
+
+aapdiff_specific_tags:
+  Controller:
+    - applications
+    - credential_input_sources
+    - credential_types
+    - credentials
+    - execution_environments
+    - groups
+    - hosts
+    - instance_groups
+    - inventories
+    - inventory_sources
+    - job_templates
+    - labels
+    - notifications
+    - notification_templates
+    - organizations
+    - projects
+    - roles
+    - schedules
+    - settings
+    - teams
+    - users
+    - workflow_job_templates
 ...
