@@ -1,0 +1,8 @@
+---
+controller_execution_environments:
+  - name: "Quay - lshirley - ee-xorriso-rhel9"
+    description: ""
+    organization: "DEMOLab"
+    image: "quay.io/lshirley/ee-xorriso-rhel9:latest"
+    pull: "always"
+...

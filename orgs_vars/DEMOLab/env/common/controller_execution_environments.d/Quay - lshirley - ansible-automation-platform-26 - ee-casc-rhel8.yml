@@ -1,0 +1,8 @@
+---
+controller_execution_environments:
+  - name: "Quay - lshirley - ansible-automation-platform-25 - ee-casc-rhel8"
+    description: ""
+    organization: "DEMOLab"
+    image: "quay.io/lshirley/ansible-automation-platform-25/ee-casc-rhel8:latest"
+    pull: "always"
+...

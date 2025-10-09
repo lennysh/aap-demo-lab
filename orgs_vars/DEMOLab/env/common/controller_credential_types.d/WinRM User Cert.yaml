@@ -1,0 +1,26 @@
+---
+controller_credential_types:
+  - name: "WinRM User Cert"
+    description: ""
+    kind: "cloud"
+    inputs:
+      fields:
+        - id: public_cert
+          label: Certificate
+          multiline: true
+          secret: true
+          type: string
+        - id: private_key
+          label: Key
+          multiline: true
+          secret: true
+          type: string
+
+    injectors:
+      extra_vars:
+        ansible_winrm_cert_key_pem: !unsafe '{{ tower.filename.key_file }}'
+        ansible_winrm_cert_pem: !unsafe '{{ tower.filename.cert_file }}'
+      file:
+        template.cert_file: !unsafe '{{ public_cert }}'
+        template.key_file: !unsafe '{{ private_key }}'
+...
