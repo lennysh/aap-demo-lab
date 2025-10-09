@@ -1,0 +1,45 @@
+---
+# Override filetree_read, filetree_create
+controller_configuration_secure_logging: false
+
+filetree_controller_settings: "{{ dir_orgs_vars }}/{{ orgs }}/env/{{ env }}/controller_settings.d/"
+filetree_controller_labels: "{{ dir_orgs_vars }}/{{ orgs }}/env/common/controller_labels.d/"
+filetree_controller_credential_types: "{{ dir_orgs_vars }}/{{ orgs }}/env/common/controller_credential_types.d/"
+filetree_controller_credentials:
+  - "{{ dir_orgs_vars }}/{{ orgs }}/env/common/controller_credentials.d/"
+  - "{{ dir_orgs_vars }}/{{ orgs }}/env/{{ env }}/controller_credentials.d/"
+filetree_controller_credential_input_sources:
+  - "{{ dir_orgs_vars }}/{{ orgs }}/env/common/controller_credential_input_sources.d/"
+  - "{{ dir_orgs_vars }}/{{ orgs }}/env/{{ env }}/controller_credential_input_sources.d/"
+filetree_controller_notifications:
+  - "{{ dir_orgs_vars }}/{{ orgs }}/env/common/controller_notification_templates.d/"
+  - "{{ dir_orgs_vars }}/{{ orgs }}/env/{{ env }}/controller_notification_templates.d/"
+filetree_controller_projects:
+  - "{{ dir_orgs_vars }}/{{ orgs }}/env/common/controller_projects.d/"
+  - "{{ dir_orgs_vars }}/{{ orgs }}/env/{{ env }}/controller_projects.d/"
+filetree_controller_execution_environments:
+  - "{{ dir_orgs_vars }}/{{ orgs }}/env/common/controller_execution_environments.d/"
+  - "{{ dir_orgs_vars }}/{{ orgs }}/env/{{ env }}/controller_execution_environments.d/"
+filetree_controller_inventories:
+  - "{{ dir_orgs_vars }}/{{ orgs }}/env/common/controller_inventories.d/"
+  - "{{ dir_orgs_vars }}/{{ orgs }}/env/{{ env }}/controller_inventories.d/"
+filetree_controller_inventory_sources:
+  - "{{ dir_orgs_vars }}/{{ orgs }}/env/common/controller_inventory_sources.d/"
+  - "{{ dir_orgs_vars }}/{{ orgs }}/env/{{ env }}/controller_inventory_sources.d/"
+filetree_controller_instance_groups: "{{ dir_orgs_vars }}/{{ orgs }}/env/{{ env }}/controller_instance_groups.d/"
+filetree_controller_hosts:
+  - "{{ dir_orgs_vars }}/{{ orgs }}/env/common/controller_hosts.d/"
+  - "{{ dir_orgs_vars }}/{{ orgs }}/env/{{ env }}/controller_hosts.d/"
+filetree_controller_groups: "{{ dir_orgs_vars }}/{{ orgs }}/env/common/controller_groups.d/"
+filetree_controller_templates:
+  - "{{ dir_orgs_vars }}/{{ orgs }}/env/common/controller_job_templates.d/"
+  - "{{ dir_orgs_vars }}/{{ orgs }}/env/{{ env }}/controller_job_templates.d/"
+filetree_controller_workflow_job_templates:
+  - "{{ dir_orgs_vars }}/{{ orgs }}/env/common/controller_workflow_job_templates.d/"
+  - "{{ dir_orgs_vars }}/{{ orgs }}/env/{{ env }}/controller_workflow_job_templates.d/"
+filetree_controller_schedules:
+  - "{{ dir_orgs_vars }}/{{ orgs }}/env/common/controller_schedules.d/"
+  - "{{ dir_orgs_vars }}/{{ orgs }}/env/{{ env }}/controller_schedules.d/"
+filetree_controller_roles:
+  - "{{ dir_orgs_vars }}/{{ orgs }}/env/common/controller_roles.d/"
+  - "{{ dir_orgs_vars }}/{{ orgs }}/env/{{ env }}/controller_roles.d/"
