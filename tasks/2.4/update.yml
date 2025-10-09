@@ -32,4 +32,8 @@
     label: "{{ __changes.new_var }} -=> {{ __changes.old_var }}"
   tags:
     - always
+
+- name: Dispatch for AAP {{ casc_aap_version }}
+  ansible.builtin.import_role:
+    name: infra.controller_configuration.dispatch
 ...
