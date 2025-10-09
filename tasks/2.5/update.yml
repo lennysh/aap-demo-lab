@@ -1,9 +1,16 @@
 ---
-- name: FileTree Read for AAP {{ aap_version }}
+- name: Set some facts for AAP {{ casc_aap_version }}
+  when: aap_token is undefined
+  ansible.builtin.set_fact:
+    aap_token: "{{ vault_aap_token }}"
+  tags:
+    - always
+
+- name: FileTree Read for AAP {{ casc_aap_version }}
   ansible.builtin.import_role:
     name: infra.aap_configuration_extended.filetree_read
 
-- name: Dispatch for AAP {{ aap_version }}
+- name: Dispatch for AAP {{ casc_aap_version }}
   ansible.builtin.import_role:
     name: infra.aap_configuration.dispatch
 ...

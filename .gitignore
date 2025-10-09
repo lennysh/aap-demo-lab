@@ -3,6 +3,7 @@ temp/
 ansible.cfg
 ansible-navigator.*
 *artifact*.json
+**/ignore_*
 
 **/.vscode
 **/.ansible
