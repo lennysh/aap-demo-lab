@@ -1,0 +1,13 @@
+---
+aap_applications:
+  - name: "DEMOLab Application 01"
+    description: ""
+    organization: "DEMOLab"
+    redirect_uris: "https://demolab.com"
+    post_logout_redirect_uris: ""
+    algorithm: ""
+    user: ""
+    client_type: "confidential"
+    skip_authorization: "False"
+    authorization_grant_type: "authorization-code"
+...

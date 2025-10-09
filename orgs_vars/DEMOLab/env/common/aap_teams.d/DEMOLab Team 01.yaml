@@ -1,0 +1,7 @@
+---
+aap_teams:
+  - name: "DEMOLab Team 01"
+    description: ""
+    organization: "DEMOLab"
+    state: present
+...

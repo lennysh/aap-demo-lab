@@ -1,0 +1,12 @@
+---
+aap_user_accounts:
+  - username: "DEMOLab_User_02"
+    password: "redhat123"
+    email: ""
+    first_name: "DEMOLab"
+    last_name: "User 02"
+    auditor: "False"
+    superuser: "False"
+    update_secrets: true
+    state: present
+...
