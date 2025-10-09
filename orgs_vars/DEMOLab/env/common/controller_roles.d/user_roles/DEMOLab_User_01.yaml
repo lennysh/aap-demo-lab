@@ -1,0 +1,29 @@
+---
+controller_roles:
+  # - user: "DEMOLab_User_01"
+  #   project: "GitHub - lennysh - aap-casc-demo-lab"
+  #   roles:
+  #     - "use"
+
+  # - user: "DEMOLab_User_01"
+  #   inventories:
+  #     - "localhost Inventory"
+  #   roles:
+  #     - "use"
+
+  # - user: "DEMOLab_User_01"
+  #   workflow_job_templates:
+  #     - "Demo - Workflow Job Template"
+  #   roles:
+  #     - "execute"
+
+  # - user: "DEMOLab_User_01"
+  #   instance_groups:
+  #     - "controlplane"
+  #     - "default"
+  #   role: "use"
+
+  # - user: "DEMOLab_User_01"
+  #   credentials:
+  #     - ""
+  #   role: "use"

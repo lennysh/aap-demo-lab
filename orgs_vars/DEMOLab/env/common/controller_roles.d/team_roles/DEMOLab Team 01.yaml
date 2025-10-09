@@ -1,0 +1,48 @@
+---
+controller_roles:
+  - team: "DEMOLab Team 01"
+    job_templates:
+      - "Demo - Config as Code - Create Organization"
+    roles:
+      - "read"
+      - "execute"
+
+  # - team: "DEMOLab Team 01"
+  #   workflows:
+  #     - "Demo - Workflow Job Template"
+  #   roles:
+  #     - "read"
+  #     - "execute"
+
+  - team: "DEMOLab Team 01"
+    projects:
+      - "GitHub - lennysh - aap-casc-demo-lab"
+    roles:
+      - "read"
+      - "update"
+      - "use"
+
+  - team: "DEMOLab Team 01"
+    inventories:
+      - "localhost Inventory"
+    roles:
+      - "read"
+      - "update"
+      - "use"
+
+  - team: "DEMOLab Team 01"
+    instance_groups:
+      - "controlplane"
+      - "default"
+    roles:
+      - "use"
+
+  # - team: "DEMOLab Team 01"
+  #   credentials:
+  #     ## Global Creds
+  #     # - "Ansible Galaxy"
+  #     # - "Default Execution Environment Registry Credential"
+  #     ## Org Creds
+  #     - 
+  #   roles:
+  #     - "use"
