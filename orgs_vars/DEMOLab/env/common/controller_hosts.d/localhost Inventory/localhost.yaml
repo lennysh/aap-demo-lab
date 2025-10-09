@@ -2,5 +2,5 @@
 controller_hosts:
   - name: "localhost"
     description: ""
-    inventory: "localhost"
+    inventory: "localhost Inventory"
 ...

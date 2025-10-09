@@ -1,8 +1,8 @@
 ---
 controller_inventories:
-  - name: "localhost"
+  - name: "localhost Inventory"
     description: ""
-    organization: "DEMO ORG 01"
+    organization: "DEMOLab"
     host_filter: ""
     prevent_instance_group_fallback: False
 ...
