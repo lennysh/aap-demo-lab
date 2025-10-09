@@ -5,6 +5,8 @@
     controller_host: "{{ aap_hostname }}"
     controller_validate_certs: "{{ aap_validate_certs }}"
     controller_oauthtoken: "{{ controller_token.token | default(vault_aap_token) }}"
+    controller_configuration_async_retries: "{{ aap_configuration_async_retries | default(omit) }}"
+    controller_configuration_async_delay: "{{ aap_configuration_async_delay | default(omit) }}"
   tags:
     - always
 
