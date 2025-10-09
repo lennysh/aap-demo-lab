@@ -3,4 +3,7 @@ controller_hosts:
   - name: "localhost"
     description: ""
     inventory: "localhost Inventory"
+    variables:
+      ansible_connection: local
+      ansible_python_interpreter: !unsafe '{{ ansible_playbook_python }}'
 ...
