@@ -30,6 +30,13 @@ Before you begin, make sure you have the following tools installed on your local
 
 ---
 
+## Execution Environments (EEs)
+
+* All of the EE's I use can be downloaded from Quay.io here: [https://quay.io/user/lshirley](https://quay.io/user/lshirley)
+* If you prefer to build your own, I've stored my EE builds here: [https://github.com/lennysh/aap-execution-environments](https://github.com/lennysh/aap-execution-environments)
+
+---
+
 ## ⚙️ Setup and Configuration
 
 Follow these steps to get the repository configured for your environment.
