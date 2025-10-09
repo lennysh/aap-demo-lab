@@ -1,0 +1,28 @@
+---
+casc_aap_version: 2.4
+
+omit_id: true
+
+controller_configuration_dispatcher_var_changes:
+  - old_var: controller_organizations
+    new_var: aap_organizations
+    results_var: __contents_filetree_controller_organizations
+  - old_var: controller_applications
+    new_var: aap_applications
+    results_var: __contents_filetree_controller_applications
+  - old_var: controller_user_accounts
+    new_var: aap_user_accounts
+    results_var: __contents_filetree_controller_user_accounts
+  - old_var: controller_teams
+    new_var: aap_teams
+    results_var: __contents_filetree_controller_teams
+
+filetree_controller_applications: "{{ dir_orgs_vars }}/{{ orgs }}/env/common/aap_applications.d/"
+filetree_controller_organizations:
+  - "{{ dir_orgs_vars }}/{{ orgs }}/env/common/aap_organizations.d/"
+  - "{{ dir_orgs_vars }}/{{ orgs }}/env/{{ env }}/aap_organizations.d/"
+filetree_controller_teams: "{{ dir_orgs_vars }}/{{ orgs }}/env/common/aap_teams.d/"
+filetree_controller_user_accounts:
+  - "{{ dir_orgs_vars }}/{{ orgs }}/env/common/aap_user_accounts.d/"
+  - "{{ dir_orgs_vars }}/{{ orgs }}/env/{{ env }}/aap_user_accounts.d/"
+...

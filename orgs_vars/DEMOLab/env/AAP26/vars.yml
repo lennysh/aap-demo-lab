@@ -1,0 +1,16 @@
+---
+casc_aap_version: 2.6
+
+omit_id: true
+
+filetree_aap_applications: "{{ dir_orgs_vars }}/{{ orgs }}/env/common/aap_applications.d/"
+filetree_aap_organizations:
+  - "{{ dir_orgs_vars }}/{{ orgs }}/env/common/aap_organizations.d/"
+  - "{{ dir_orgs_vars }}/{{ orgs }}/env/{{ env }}/aap_organizations.d/"
+filetree_aap_teams:
+  - "{{ dir_orgs_vars }}/{{ orgs }}/env/common/aap_teams.d/"
+  - "{{ dir_orgs_vars }}/{{ orgs }}/env/{{ env }}/aap_teams.d/"
+filetree_aap_user_accounts:
+  - "{{ dir_orgs_vars }}/{{ orgs }}/env/common/aap_user_accounts.d/"
+  - "{{ dir_orgs_vars }}/{{ orgs }}/env/{{ env }}/aap_user_accounts.d/"
+...
