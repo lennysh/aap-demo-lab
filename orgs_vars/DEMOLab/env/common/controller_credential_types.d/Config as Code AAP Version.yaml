@@ -1,0 +1,17 @@
+---
+controller_credential_types:
+  - name: "Config as Code AAP Version"
+    description: ""
+    kind: "cloud"
+    inputs:
+      fields:
+        - id: casc_aap_version
+          label: Config as Code AAP Version (2.x)
+          type: string
+      required:
+        - casc_aap_version
+
+    injectors:
+      extra_vars:        
+        casc_aap_version: !unsafe '{{ casc_aap_version }}'
+...

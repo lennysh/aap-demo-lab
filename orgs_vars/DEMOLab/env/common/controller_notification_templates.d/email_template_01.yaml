@@ -1,0 +1,16 @@
+---
+controller_notifications:
+  - name: "{{ email_template_01.name }}"
+    organization: "DEMOLab"
+    notification_type: "email"
+    notification_configuration:
+      host: "{{ email_template_01.host }}"
+      port: 25
+      sender: "demolab-{{ env | lower }}@{{ email_template_01.domain }}"
+      timeout: 120
+      use_ssl: false
+      use_tls: false
+      password: ""
+      username: ""
+      recipients: "{{ email_template_01.recipients }}"
+...

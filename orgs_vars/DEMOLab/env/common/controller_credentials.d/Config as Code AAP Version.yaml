@@ -1,0 +1,10 @@
+---
+controller_credentials:
+  - name: "Config as Code AAP Version {{ casc_aap_version }}"
+    description: ""
+    credential_type: "Config as Code AAP Version"
+    organization: "DEMOLab"
+    inputs:
+      casc_aap_version: "{{ casc_aap_version | string }}"
+
+...

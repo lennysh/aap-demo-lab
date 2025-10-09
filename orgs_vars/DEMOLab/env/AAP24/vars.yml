@@ -1,5 +1,6 @@
 ---
 casc_aap_version: 2.4
+casc_ee_name: "Quay - lshirley - ansible-automation-platform-24 - ee-casc-rhel9"
 
 omit_id: true
 

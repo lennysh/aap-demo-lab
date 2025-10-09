@@ -36,11 +36,11 @@ fi
 # --- Validate Environment ---
 env_dir="$orgs_base_dir/$org/env"
 # Check if the environment exists and is not the 'common' directory.
-if [[ ! -d "$env_dir/$env" ]] || [[ "$env" == "common" ]]; then
+if [[ ! -d "$env_dir/$env" ]]; then
     echo "Error: Environment '$env' not found or is invalid for organization '$org'."
     echo ""
     # List available environments for the given organization.
-    available_envs=$(find "$env_dir" -mindepth 1 -maxdepth 1 -type d -not -name "common" -printf "%f|" | sed 's/|$//')
+    available_envs=$(find "$env_dir" -mindepth 1 -maxdepth 1 -type d -printf "%f|" | sed 's/|$//')
     echo "Available environments for '$org': {$available_envs}"
     exit 1
 fi

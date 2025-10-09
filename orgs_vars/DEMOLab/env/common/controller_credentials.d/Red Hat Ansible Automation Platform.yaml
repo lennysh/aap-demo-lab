@@ -1,0 +1,14 @@
+---
+controller_credentials:
+  - name: "Red Hat Ansible Automation Platform {{ casc_aap_version }}"
+    description: ""
+    credential_type: "Red Hat Ansible Automation Platform"
+    organization: "DEMOLab"
+    inputs:
+      host: "https://{{ vault_aap_hostname }}"
+      password: "{{ vault_aap_password | default(omit) }}"
+      username: "{{ vault_aap_username | default(omit) }}"
+      token: "{{ vault_aap_token | default(omit) }}"
+      verify_ssl: "{{ vault_aap_validate_certs }}"
+
+...
