@@ -39,7 +39,7 @@ Follow these steps to get the repository configured for your environment.
 First, clone this repository to your local machine:
 ```shell
 git clone <your-repo-url>
-cd aap-demo-lab
+cd aap-casc-demo-lab
 ```
 
 ### 2. Configure Ansible
