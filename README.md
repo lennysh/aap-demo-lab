@@ -1,5 +1,10 @@
 # AAP Configuration as Code Demo Lab
 
+> [!WARNING]
+> **🚧 Work in Progress 🚧**
+>
+> This repository is under active development. Features may be incomplete, subject to breaking changes, or not fully tested. Please use with caution.
+
 Welcome! 👋 This repository provides a powerful, version-aware framework for managing your Ansible Automation Platform (AAP) environment using a Configuration as Code (CaC) approach. It's designed to handle multiple AAP versions seamlessly, ensuring that the correct Ansible Collections and Execution Environments are used automatically.
 
 This framework allows you to **extract ("read")** your existing AAP configuration into local YAML files and **apply ("update")** version-controlled configurations back to your AAP instance.
