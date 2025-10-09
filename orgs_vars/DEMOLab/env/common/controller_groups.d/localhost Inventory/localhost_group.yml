@@ -1,0 +1,8 @@
+---
+controller_groups:
+  - name: "localhost_group"
+    description: ""
+    inventory: "localhost Inventory"
+    hosts:
+      - "localhost"
+...
