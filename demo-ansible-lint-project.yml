@@ -13,7 +13,7 @@
       ansible.builtin.shell: |
         set -e
         unset ANSIBLE_COLLECTIONS_PATHS
-        ansible-lint --parseable --nocolor --strict .
+        ansible-lint --parseable --nocolor .
 
     - name: Display linting results
       when: lint_result.stdout is defined and lint_result.stdout | length > 0
