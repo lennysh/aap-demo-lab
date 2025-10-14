@@ -51,5 +51,6 @@ echo "Running playbook for AAP version: $casc_aap_version"
 ansible-navigator run "${playbook_args[@]}" \
     --mode stdout \
     --pae false \
+    --pull-policy missing \
     --execution-environment-image "$execution_environment" \
     --execution-environment-volume-mounts "$(pwd):/home/user:Z"
