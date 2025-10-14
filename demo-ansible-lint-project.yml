@@ -10,7 +10,7 @@
       register: env_output
 
     - name: Unset deprecated 'ANSIBLE_COLLECTIONS_PATHS' environment var
-      ansible.builtin.command: unset ANSIBLE_COLLECTIONS_PATHS
+      ansible.builtin.shell: unset ANSIBLE_COLLECTIONS_PATHS
       changed_when: false
       when: "'ANSIBLE_COLLECTIONS_PATHS=' in env_output.stdout"
 
