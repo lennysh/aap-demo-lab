@@ -4,14 +4,19 @@
   connection: local
   gather_facts: false
   tasks:
-    - name: Run ansible-lint on the project directory
+    - name: Get all environment vars
       ansible.builtin.command: env
       changed_when: false
-      register: env_debug
+      register: env_output
 
-    - name: Run ansible-lint on the project directory
-      ansible.builtin.debug:
-        var: env_debug
+    - name: Unset deprecated 'ANSIBLE_COLLECTIONS_PATHS' environment var
+      ansible.builtin.command: unset ANSIBLE_COLLECTIONS_PATHS
+      changed_when: false
+      when: "'ANSIBLE_COLLECTIONS_PATHS=' in env_output.stdout"
+
+    - name: Verify removed vars are indeed removed
+      ansible.builtin.command: env
+      changed_when: false
 
     - name: Run ansible-lint on the project directory
       ansible.builtin.command: ansible-lint .
