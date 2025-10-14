@@ -25,7 +25,7 @@
       ansible.builtin.debug:
         var: lint_result.stderr_lines
 
-    - name: Fail the playbook if linting issues were found
+    - name: Fail the playbook if linting errors were found (warnings are OK)
       when: lint_result.rc != 0
       ansible.builtin.fail:
         msg: Ansible-lint failed with exit code {{ lint_result.rc }}. Please review the output above.
