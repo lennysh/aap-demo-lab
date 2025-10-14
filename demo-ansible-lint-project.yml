@@ -26,14 +26,6 @@
         var: lint_result.stderr_lines
 
     - name: Fail the playbook if linting issues were found
-      # when: lint_result.rc != 0
-      when: lint_result.stderr is defined and lint_result.stderr | length > 0
+      when: lint_result.rc != 0
       ansible.builtin.fail:
-        msg: |
-          Ansible-lint failed with exit code {{ lint_result.rc }}. Please review the output below.
-
-          STDOUT:
-          {{ lint_result.stdout | default('No stdout captured.') }}
-
-          STDERR:
-          {{ lint_result.stderr | default('No stderr captured.') }}
+        msg: Ansible-lint failed with exit code {{ lint_result.rc }}. Please review the output above.
