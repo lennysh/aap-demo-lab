@@ -3,25 +3,12 @@
   hosts: localhost
   connection: local
   gather_facts: false
-  environment:
-    ANSIBLE_COLLECTIONS_PATHS: ""
   tasks:
-    # - name: Get all environment vars
-    #   ansible.builtin.command: env
-    #   changed_when: false
-    #   register: env_output
-
-    # - name: Unset deprecated 'ANSIBLE_COLLECTIONS_PATHS' environment var
-    #   ansible.builtin.shell: unset ANSIBLE_COLLECTIONS_PATHS
-    #   changed_when: false
-    #   when: "'ANSIBLE_COLLECTIONS_PATHS=' in env_output.stdout"
-
-    # - name: Verify removed vars are indeed removed
-    #   ansible.builtin.command: env
-    #   changed_when: false
-
     - name: Run ansible-lint on the project directory
-      ansible.builtin.shell: unset ANSIBLE_COLLECTIONS_PATHS && ansible-lint .
+      ansible.builtin.shell: |
+        set -e
+        unset ANSIBLE_COLLECTIONS_PATHS
+        ansible-lint .
       args:
         chdir: /runner/project
       register: lint_result
@@ -41,4 +28,4 @@
     - name: Fail the playbook if linting issues were found
       ansible.builtin.fail:
         msg: "Ansible-lint identified issues in the project. Please review the job output for details."
-      when: lint_result.rc != 0
+      when: lint_result.stderr is defined and lint_result.stderr | length > 0
