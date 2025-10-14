@@ -8,7 +8,7 @@
       ansible.builtin.shell: |
         set -e
         unset ANSIBLE_COLLECTIONS_PATHS
-        ansible-lint --nocolor --strict .
+        ansible-lint --parseable --nocolor --strict .
       args:
         chdir: /runner/project
       register: lint_result
