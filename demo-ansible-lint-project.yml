@@ -15,17 +15,24 @@
       changed_when: false
       ignore_errors: true
 
-    - name: Display linting results
-      ansible.builtin.debug:
-        var: lint_result.stdout
-      when: lint_result.stdout is defined and lint_result.stdout | length > 0
+    # - name: Display linting results
+    #   ansible.builtin.debug:
+    #     var: lint_result.stdout
+    #   when: lint_result.stdout is defined and lint_result.stdout | length > 0
 
-    - name: Display linting warnings and errors (if any)
-      ansible.builtin.debug:
-        var: lint_result.stderr
-      when: lint_result.stderr is defined and lint_result.stderr | length > 0
+    # - name: Display linting warnings and errors (if any)
+    #   ansible.builtin.debug:
+    #     var: lint_result.stderr
+    #   when: lint_result.stderr is defined and lint_result.stderr | length > 0
 
     - name: Fail the playbook if linting issues were found
-      ansible.builtin.fail:
-        msg: "Ansible-lint identified issues in the project. Please review the job output for details."
-      when: lint_result.rc != 0
+      ansible.builtin.debug:
+        msg: |
+          Ansible-lint failed with exit code {{ lint_result.rc }}. Please review the output below.
+
+          STDOUT:
+          {{ lint_result.stdout | default('No stdout captured.') }}
+
+          STDERR:
+          {{ lint_result.stderr | default('No stderr captured.') }}
+      failed_when: lint_result.rc != 0
