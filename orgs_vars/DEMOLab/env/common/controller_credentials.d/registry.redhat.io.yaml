@@ -1,0 +1,12 @@
+---
+controller_credentials:
+  - name: "registry.redhat.io - {{ registry_redhat_io.username }}"
+    description: ""
+    credential_type: Container Registry
+    organization: DEMOLab
+    inputs:
+      host: registry.redhat.io
+      password: "{{ registry_redhat_io.password }}"
+      username: "{{ registry_redhat_io.username }}"
+      verify_ssl: true
+...

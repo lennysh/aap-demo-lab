@@ -1,0 +1,9 @@
+---
+controller_execution_environments:
+  - name: "Red Hat - ansible-automation-platform-25 - ee-supported-rhel8"
+    description: ""
+    organization: "DEMOLab"
+    image: "registry.redhat.io/ansible-automation-platform-25/ee-supported-rhel8:latest"
+    pull: "always"
+    credential: "registry.redhat.io - {{ registry_redhat_io.username }}"
+...
