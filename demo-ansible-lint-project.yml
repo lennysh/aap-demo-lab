@@ -5,6 +5,15 @@
   gather_facts: false
   tasks:
     - name: Run ansible-lint on the project directory
+      ansible.builtin.command: env
+      changed_when: false
+      register: env_debug
+
+    - name: Run ansible-lint on the project directory
+      ansible.builtin.debug:
+        var: env_debug
+
+    - name: Run ansible-lint on the project directory
       ansible.builtin.command: ansible-lint .
       args:
         chdir: /runner/project
