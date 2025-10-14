@@ -3,6 +3,8 @@
   hosts: localhost
   connection: local
   gather_facts: false
+  environment:
+    ANSIBLE_COLLECTIONS_PATHS: ""
   tasks:
     - name: Get all environment vars
       ansible.builtin.command: env
