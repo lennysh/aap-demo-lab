@@ -1,0 +1,12 @@
+---
+- name: Create/Update ORG/ENV Directory Structure
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  vars:
+    aap_version: 2.4
+    orgs_vars: "{{ playbook_dir }}/orgs_vars"
+    org: "DEMOLab"
+    env: "AAP{{ aap_version | replace('.', '') }}"
+  roles:
+    - org_env_dir_create

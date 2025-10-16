@@ -1,0 +1,6 @@
+---
+# defaults file for org_env_dir_create
+
+org_env_dir_create_gitkeep_state: absent # touch or absent
+org_env_dir_create_root_path: '{{ orgs_vars }}/{{ org }}/env/{{ env }}'
+...

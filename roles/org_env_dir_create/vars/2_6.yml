@@ -1,0 +1,16 @@
+---
+org_env_dir_create_paths_additional:
+  # Gateway
+  - gateway_authenticator_maps.d
+  - gateway_authenticators.d
+  - gateway_http_ports.d
+  - gateway_role_definitions.d
+  - gateway_role_team_assignments.d
+  - gateway_role_user_assignments.d
+  - gateway_routes.d
+  - gateway_service_clusters.d
+  - gateway_service_keys.d
+  - gateway_service_nodes.d
+  - gateway_services.d
+  - gateway_settings.d
+...

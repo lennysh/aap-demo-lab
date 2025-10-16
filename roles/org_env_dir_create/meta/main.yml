@@ -1,0 +1,25 @@
+---
+galaxy_info:
+  author: Lenny Shirley
+  description: Create/update directory structure for org/env
+
+  issue_tracker_url: https://github.com/lennysh/aap-casc-demo-lab/issues
+
+  license: GPL-3.0-or-later
+
+  min_ansible_version: !!str 2.1
+
+  galaxy_tags:
+    - aap
+    - ah
+    - awx
+    - configuration
+    - controller
+    - dispatch
+    - eda
+    - filetree
+    - gateway
+    - platform
+
+dependencies: []
+...

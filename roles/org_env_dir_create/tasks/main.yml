@@ -1,0 +1,28 @@
+---
+- name: Include vars
+  ansible.builtin.include_vars:
+    file: "{{ item }}"
+  loop:
+    # - '{{ role_path }}/defaults/main.yml'
+    # - '{{ role_path }}/vars/main.yml'
+    - '{{ role_path }}/vars/{{ aap_version | replace(".", "_") }}.yml'
+
+- name: Set paths
+  ansible.builtin.set_fact:
+    __paths: '{{ (org_env_dir_create_paths_common + org_env_dir_create_paths_additional | default([])) | unique | sort }}'
+
+- name: Create directory structure
+  loop: '{{ __paths }}'
+  ansible.builtin.file:
+    name: '{{ org_env_dir_create_root_path }}/{{ item }}'
+    state: directory
+    mode: '0755'
+    recurse: true
+
+- name: Manage .gitkeep files
+  loop: '{{ __paths }}'
+  ansible.builtin.file:
+    name: '{{ org_env_dir_create_root_path }}/{{ item }}/.gitkeep'
+    state: '{{ org_env_dir_create_gitkeep_state }}'
+    mode: '0644'
+...
