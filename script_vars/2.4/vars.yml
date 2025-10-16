@@ -1,5 +1,6 @@
 ---
 execution_environment: "quay.io/lshirley/ansible-automation-platform-24/ee-casc-rhel9"
+
 aapread_specific_tags:
   Controller:
     - applications

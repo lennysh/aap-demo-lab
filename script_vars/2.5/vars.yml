@@ -1,5 +1,6 @@
 ---
 execution_environment: "quay.io/lshirley/ansible-automation-platform-25/ee-casc-rhel9"
+
 aapread_category_tags:
   - controller
   - gateway
@@ -58,28 +59,39 @@ aapread_specific_tags:
 
 aapupdate_specific_tags:
   Controller:
-    - applications
     - credential_input_sources
     - credential_types
     - credentials
     - execution_environments
-    - groups
+    - host_groups
     - hosts
     - instance_groups
     - inventories
     - inventory_sources
     - job_templates
     - labels
-    - notifications
     - notification_templates
-    - organizations
     - projects
     - roles
     - schedules
     - settings
+    - workflow_job_templates
+  Gateway:
+    - applications
+    - authenticator_maps
+    - authenticators
+    - http_ports
+    - organizations
+    - role_definitions
+    - role_team_assignments
+    - role_user_assignments
+    - routes
+    - service_clusters
+    - service_keys
+    - service_nodes
+    - services
     - teams
     - users
-    - workflow_job_templates
 
 aapdiff_specific_tags:
   Controller:
