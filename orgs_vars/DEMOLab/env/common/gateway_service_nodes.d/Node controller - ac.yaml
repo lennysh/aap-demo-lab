@@ -1,0 +1,7 @@
+---
+gateway_service_nodes:
+  - name: Node controller - ac
+    address: ac-service
+    service_cluster: "2"
+    tags: ""
+...

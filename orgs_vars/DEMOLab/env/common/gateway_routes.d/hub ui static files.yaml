@@ -1,0 +1,13 @@
+---
+gateway_routes:
+  - name: hub ui static files
+    description: !unsafe Hub UI Static Files
+    http_port: "1"
+    service_cluster: "3"
+    service_port: "24880"
+    is_service_https: "False"
+    service_path: /static/galaxy_ng/
+    gateway_path: /static/galaxy_ng/
+    enable_gateway_auth: "True"
+    node_tags: ""
+...

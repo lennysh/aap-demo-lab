@@ -1,0 +1,13 @@
+---
+gateway_routes:
+  - name: pulp container tokens
+    description: !unsafe Pulp Container Tokens
+    http_port: "1"
+    service_cluster: "3"
+    service_port: "24880"
+    is_service_https: "False"
+    service_path: /token
+    gateway_path: /token
+    enable_gateway_auth: "True"
+    node_tags: ""
+...

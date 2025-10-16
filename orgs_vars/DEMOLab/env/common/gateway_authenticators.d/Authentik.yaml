@@ -1,0 +1,34 @@
+---
+gateway_authenticators:
+  - name: Authentik
+    enabled: "True"
+    create_objects: "True"
+    remove_users: "False"    
+    type: ansible_base.authentication.authenticator_plugins.saml
+    order: "2"
+    configuration:
+      CALLBACK_URL: "{{ authentik.callback_url }}"
+      EXTRA_DATA: []
+      IDP_ATTR_EMAIL: http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress
+      IDP_ATTR_FIRST_NAME: firstName
+      IDP_ATTR_LAST_NAME: lastName
+      IDP_ATTR_USERNAME: http://schemas.goauthentik.io/2021/02/saml/username
+      IDP_ATTR_USER_PERMANENT_ID: http://schemas.goauthentik.io/2021/02/saml/username
+      IDP_ENTITY_ID: "{{ authentik.entity_id }}"
+      IDP_GROUPS: http://schemas.xmlsoap.org/claims/Group
+      IDP_URL: "{{ authentik.idp_url }}"
+      IDP_X509_CERT: "{{ authentik_public_cert }}"
+      ORG_INFO: "{{ authentik.org_info }}"
+      SECURITY_CONFIG: {}
+      SP_ENTITY_ID: "{{ authentik.entity_id }}"
+      SP_EXTRA:
+        requestedAuthnContext: False
+      SP_PRIVATE_KEY: "{{ authentik_private_key }}"
+      SP_PUBLIC_CERT: "{{ authentik_public_cert }}"
+      SUPPORT_CONTACT:
+        givenName: "{{ authentik_contact.name }}"
+        emailAddress: "{{ authentik_contact.email }}"
+      TECHNICAL_CONTACT:
+        givenName: "{{ authentik_contact.name }}"
+        emailAddress: "{{ authentik_contact.email }}"
+...

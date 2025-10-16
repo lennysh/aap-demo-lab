@@ -4,7 +4,7 @@
   connection: local
   gather_facts: false
   vars:
-    aap_version: 2.4
+    aap_version: 2.6
     orgs_vars: "{{ playbook_dir }}/orgs_vars"
     org: "DEMOLab"
     env: "AAP{{ aap_version | replace('.', '') }}"

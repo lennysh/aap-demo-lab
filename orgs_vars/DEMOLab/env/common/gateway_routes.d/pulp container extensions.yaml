@@ -1,0 +1,13 @@
+---
+gateway_routes:
+  - name: pulp container extensions
+    description: !unsafe Pulp Container Extensions
+    http_port: "1"
+    service_cluster: "3"
+    service_port: "24880"
+    is_service_https: "False"
+    service_path: /extensions
+    gateway_path: /extensions
+    enable_gateway_auth: "True"
+    node_tags: ""
+...

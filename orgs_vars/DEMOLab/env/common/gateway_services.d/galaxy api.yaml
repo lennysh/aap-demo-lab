@@ -1,0 +1,15 @@
+---
+gateway_services:
+  - name: galaxy api
+    description: !unsafe
+    http_port: "1"
+    service_cluster: "3"
+    service_port: "24880"
+    is_service_https: "False"
+    service_path: /api/galaxy/
+    api_slug: galaxy
+    enable_gateway_auth: "True"
+    order: "2"
+    node_tags: ""
+    node_tags: ""
+...

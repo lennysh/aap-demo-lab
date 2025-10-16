@@ -1,0 +1,14 @@
+---
+gateway_services:
+  - name: lightspeed api
+    description: !unsafe
+    http_port: "1"
+    service_cluster: "5"
+    service_port: "8000"
+    is_service_https: "False"
+    service_path: /api/
+    api_slug: lightspeed
+    enable_gateway_auth: "True"
+    order: "4"
+    node_tags: ""
+...

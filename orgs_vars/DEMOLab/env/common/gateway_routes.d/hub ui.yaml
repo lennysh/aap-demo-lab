@@ -1,0 +1,12 @@
+---
+gateway_routes:
+  - name: hub ui
+    description: !unsafe Hub UI
+    http_port: "1"
+    service_cluster: "3"
+    service_port: "24880"
+    is_service_https: "False"
+    service_path: /ui/
+    gateway_path: /ui/
+    enable_gateway_auth: "True"
+    node_tags: ""

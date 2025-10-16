@@ -1,0 +1,13 @@
+---
+gateway_routes:
+  - name: pulp content
+    description: !unsafe Pulp Content
+    http_port: "1"
+    service_cluster: "3"
+    service_port: "24880"
+    is_service_https: "False"
+    service_path: /pulp
+    gateway_path: /pulp
+    enable_gateway_auth: "True"
+    node_tags: ""
+...

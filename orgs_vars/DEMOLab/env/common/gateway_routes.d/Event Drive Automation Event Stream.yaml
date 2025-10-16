@@ -1,0 +1,13 @@
+---
+gateway_routes:
+  - name: Event Drive Automation Event Stream
+    description: !unsafe Proxy to the EDA Event Stream
+    http_port: "1"
+    service_cluster: "4"
+    service_port: "8000"
+    is_service_https: "False"
+    service_path: /
+    gateway_path: /eda-event-streams
+    enable_gateway_auth: "False"
+    node_tags: eda-event-stream
+...

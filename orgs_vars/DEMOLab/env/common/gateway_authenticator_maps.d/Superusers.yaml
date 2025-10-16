@@ -1,0 +1,12 @@
+---
+gateway_authenticator_maps:
+  - name: Superusers
+    authenticator: Authentik
+    map_type: is_superuser
+    role: ""
+    organization: ""
+    team: ""
+    revoke: "False"
+    triggers: '{''attributes'': {''join_condition'': ''or'', ''http://schemas.xmlsoap.org/claims/Group'': {''contains'': ''Admins''}}}'
+    order: "1"
+...

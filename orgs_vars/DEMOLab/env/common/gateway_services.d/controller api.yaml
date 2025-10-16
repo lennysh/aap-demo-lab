@@ -1,0 +1,14 @@
+---
+gateway_services:
+  - name: controller api
+    description: !unsafe
+    http_port: "1"
+    service_cluster: "2"
+    service_port: "80"
+    is_service_https: "False"
+    service_path: /api/controller/
+    api_slug: controller
+    enable_gateway_auth: "True"
+    order: "1"
+    node_tags: ""
+...

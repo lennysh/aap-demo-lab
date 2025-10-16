@@ -46,6 +46,7 @@ playbook_args=(
     "aapread.yml"
     "-e" "{output_path: $parent_dir/temp/$dest_folder, orgs: $org, dir_orgs_vars: orgs_vars, env: $env}"
     "-e" "@orgs_vars/$org/env/$env/vault.yml"
+    # "-e" "flatten_output=true"
 )
 
 if [ -n "$tags" ]; then

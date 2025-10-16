@@ -1,0 +1,14 @@
+---
+gateway_services:
+  - name: eda api
+    description: !unsafe
+    http_port: "1"
+    service_cluster: "4"
+    service_port: "8000"
+    is_service_https: "False"
+    service_path: /api/eda/
+    api_slug: eda
+    enable_gateway_auth: "True"
+    order: "3"
+    node_tags: eda
+...

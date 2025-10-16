@@ -1,0 +1,12 @@
+---
+gateway_authenticator_maps:
+  - name: ORG Default - Everyone a Member
+    authenticator: Authentik
+    map_type: organization
+    role: Organization Member
+    organization: Default
+    team: ""
+    revoke: "False"
+    triggers: '{''always'': {}}'
+    order: "1"
+...

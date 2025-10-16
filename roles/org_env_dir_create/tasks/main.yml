@@ -17,7 +17,6 @@
     name: '{{ org_env_dir_create_root_path }}/{{ item }}'
     state: directory
     mode: '0755'
-    recurse: true
 
 - name: Manage .gitkeep files
   loop: '{{ __paths }}'

@@ -1,0 +1,13 @@
+---
+gateway_routes:
+  - name: hub container registry
+    description: !unsafe Hub Container Registry.
+    http_port: "1"
+    service_cluster: "3"
+    service_port: "24880"
+    is_service_https: "False"
+    service_path: /v2/
+    gateway_path: /v2/
+    enable_gateway_auth: "True"
+    node_tags: ""
+...
